@@ -41,22 +41,48 @@ return {
     end,
   },
   {
-    "wtfox/jellybeans.nvim",
-    lazy = false,
+    "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
-      -- vim.cmd("colorscheme jellybeans")
+      -- vim.cmd("colorscheme vscode")
     end,
-    opts = {}, -- Optional
   },
   {
     "thesimonho/kanagawa-paper.nvim",
     lazy = false,
     priority = 1000,
     config = function()
+      require("kanagawa-paper").setup({
+        -- optional settings
+        transparent = true, -- set true if you want a transparent background
+      })
+
       -- vim.cmd("colorscheme kanagawa-paper")
     end,
     opts = {},
+  },
+  {
+    "mslvx/obscure.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      require("obscure").setup({
+        transparent = true, -- set true if you want a transparent background
+      })
+      vim.cmd("colorscheme obscure")
+    end,
+  },
+  {
+    "yonatanperel/lake-dweller.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("lake-dweller").setup({
+        variant = "lake-dweller", -- "lake-dweller", "pond-dweller", or "ocean-dweller"
+      })
+      -- vim.cmd.colorscheme("lake-dweller")
+    end,
   },
   {
     "vague-theme/vague.nvim",
@@ -117,9 +143,21 @@ return {
     config = function()
       -- you don't have to call setup
       require("makurai").setup({
-        transparent = false, -- removes the bg color
+        transparent = true, -- removes the bg color
       })
-      vim.cmd.colorscheme("makurai_dark")
+      -- vim.cmd.colorscheme("makurai_dark")
+    end,
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("nordic").setup({
+        -- Optional settings
+        transparent_bg = true, -- Enable this to disable setting the background color
+      })
+      -- vim.cmd.colorscheme("nordic")
     end,
   },
   {
@@ -136,9 +174,26 @@ return {
     config = function()
       require("rose-pine").setup({
 
-        disable_background = true,
+        disable_background = false,
       })
       -- vim.cmd("colorscheme rose-pine")
+    end,
+  },
+  {
+    "wnkz/monoglow.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      -- vim.cmd("colorscheme monoglow")
+    end,
+  },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd("colorscheme miasma")
     end,
   },
 }

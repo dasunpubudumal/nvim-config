@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.g.colorscheme = "lunaperche"
+
+vim.g.lazyvim_ruby_lsp = "ruby_lsp"
