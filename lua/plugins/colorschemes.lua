@@ -57,7 +57,7 @@ return {
         transparent = true, -- set true if you want a transparent background
       })
 
-      -- vim.cmd("colorscheme kanagawa-paper")
+      vim.cmd("colorscheme kanagawa-paper")
     end,
     opts = {},
   },
@@ -70,7 +70,7 @@ return {
       require("obscure").setup({
         transparent = true, -- set true if you want a transparent background
       })
-      vim.cmd("colorscheme obscure")
+      -- vim.cmd("colorscheme obscure")
     end,
   },
   {
