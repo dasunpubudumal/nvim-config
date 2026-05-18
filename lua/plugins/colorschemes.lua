@@ -30,7 +30,10 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- vim.cmd("colorscheme vesper")
+      require("vesper").setup({
+        transparent = true, -- set true if you want a transparent background
+      })
+      vim.cmd("colorscheme vesper")
     end,
   },
   {
@@ -57,7 +60,7 @@ return {
         transparent = true, -- set true if you want a transparent background
       })
 
-      vim.cmd("colorscheme kanagawa-paper")
+      -- vim.cmd("colorscheme kanagawa-paper")
     end,
     opts = {},
   },
@@ -173,8 +176,7 @@ return {
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
-
-        disable_background = false,
+        disable_background = true,
       })
       -- vim.cmd("colorscheme rose-pine")
     end,
@@ -194,6 +196,16 @@ return {
     priority = 1000,
     config = function()
       -- vim.cmd("colorscheme miasma")
+    end,
+  },
+  {
+    "ramojus/mellifluous.nvim",
+    -- version = "v0.*", -- uncomment for stable config (some features might be missed if/when v1 comes out)
+    config = function()
+      require("mellifluous").setup({
+        disable_background = true, -- set true if you want a transparent background
+      }) -- optional, see configuration section.
+      -- vim.cmd("colorscheme mellifluous")
     end,
   },
 }
