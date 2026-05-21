@@ -33,7 +33,7 @@ return {
       require("vesper").setup({
         transparent = true, -- set true if you want a transparent background
       })
-      vim.cmd("colorscheme vesper")
+      -- vim.cmd("colorscheme vesper")
     end,
   },
   {
@@ -178,7 +178,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      -- vim.cmd("colorscheme rose-pine")
+      vim.cmd("colorscheme rose-pine")
     end,
   },
   {

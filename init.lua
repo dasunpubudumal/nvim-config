@@ -37,3 +37,5 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>t", vim.diagnostic.open_float)
+
+vim.cmd("Copilot disable")
