@@ -47,6 +47,11 @@ return {
     "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
+      require("vscode").setup({
+        transparent = true,
+        italic_comments = true,
+        italic_inlayhints = true,
+      })
       -- vim.cmd("colorscheme vscode")
     end,
   },
@@ -188,6 +193,11 @@ return {
     opts = {},
     config = function()
       -- vim.cmd("colorscheme monoglow")
+
+      -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+      -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+      -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
     end,
   },
   {
