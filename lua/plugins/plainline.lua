@@ -9,7 +9,6 @@ return {
             "tabpage",
             "branch",
             "name",
-            "diagnostics",
           },
           right = {
             "macro",
