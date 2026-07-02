@@ -35,7 +35,15 @@ vim.keymap.set(
   '<Cmd>lua require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")<CR>',
   { silent = true }
 )
-
+-- Example keymaps
 vim.keymap.set("n", "<leader>t", vim.diagnostic.open_float)
 
 vim.cmd("Copilot disable")
+
+require("lspconfig").terraformls.setup({})
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.tf", "*.tfvars" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
