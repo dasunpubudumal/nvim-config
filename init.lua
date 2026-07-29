@@ -41,6 +41,8 @@ vim.keymap.set("n", "<leader>t", vim.diagnostic.open_float)
 
 vim.cmd("Copilot disable")
 
+vim.opt.swapfile = false
+
 require("lspconfig").terraformls.setup({})
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.tf", "*.tfvars" },

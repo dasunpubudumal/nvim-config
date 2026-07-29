@@ -141,7 +141,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      vim.cmd("colorscheme rose-pine")
+      -- vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -174,6 +174,29 @@ return {
         disable_background = true, -- set true if you want a transparent background
       }) -- optional, see configuration section.
       -- vim.cmd("colorscheme mellifluous")
+    end,
+  },
+  {
+    "ember-theme/nvim",
+    name = "ember",
+    priority = 1000,
+    config = function()
+      require("ember").setup({
+        variant = "ember", -- "ember" | "ember-soft" | "ember-light"
+        transparent = true,
+      })
+      -- vim.cmd("colorscheme ember")
+    end,
+  },
+  {
+    "uhs-robert/oasis.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("oasis").setup({
+        transparent = true,
+      }) -- (see Configuration below for all customization options)
+      vim.cmd.colorscheme("oasis") -- After setup, apply theme (or any style like "oasis-night")
     end,
   },
 }
