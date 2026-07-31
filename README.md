@@ -1,5 +1,5 @@
-# My NeoVIM Config
+# My NeoVIM Config and Ghostty config
 
-Moved to `nvim` as I found it more productive. This is _my_ config.
+[Neovim](https://neovim.io/) is my primary text editor and [Ghostty](https://ghostty.org/) is the terminal I use.
 
-This config might suite _only me_.
+This config is highly opinionated. So, it might suite only me :)

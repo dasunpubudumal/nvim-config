@@ -141,7 +141,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      -- vim.cmd("colorscheme rose-pine")
+      vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -196,7 +196,7 @@ return {
       require("oasis").setup({
         transparent = true,
       }) -- (see Configuration below for all customization options)
-      vim.cmd.colorscheme("oasis") -- After setup, apply theme (or any style like "oasis-night")
+      -- vim.cmd.colorscheme("oasis") -- After setup, apply theme (or any style like "oasis-night")
     end,
   },
 }
