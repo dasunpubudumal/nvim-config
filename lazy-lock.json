@@ -45,6 +45,7 @@
   "oasis.nvim": { "branch": "main", "commit": "d71ea8a372902c55dddeb7fdae5f970a0c5f2ac1" },
   "obscure.nvim": { "branch": "main", "commit": "6c2ee734099de2f95a79a1577cd231f7fe2d38a6" },
   "octo.nvim": { "branch": "master", "commit": "b9a73e167f851a98d8f29d62658d3640bb8a7314" },
+  "oil.nvim": { "branch": "master", "commit": "b73018b75affd13fa38e2fc94ef753b465f770d7" },
   "outline.nvim": { "branch": "main", "commit": "2a132953b944561d45b52e4541ebfff71934a742" },
   "persistence.nvim": { "branch": "main", "commit": "b20b2a7887bd39c1a356980b45e03250f3dce49c" },
   "plainline": { "branch": "main", "commit": "0b5b7890369bbd9cfe17f1ba0483493c82ca44f3" },
