@@ -131,7 +131,10 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- vim.cmd.colorscheme("kanso")
+      require("kanso").setup({
+        transparent = true,
+      })
+      vim.cmd.colorscheme("kanso")
     end,
   },
   {
@@ -141,7 +144,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      vim.cmd("colorscheme rose-pine")
+      -- vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -151,7 +154,7 @@ return {
     opts = {},
     config = function()
       -- vim.cmd("colorscheme monoglow")
-
+      --
       -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
       -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
       -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
