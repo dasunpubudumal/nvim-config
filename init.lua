@@ -39,8 +39,6 @@ vim.keymap.set(
 -- Example keymaps
 vim.keymap.set("n", "<leader>t", vim.diagnostic.open_float)
 
-vim.cmd("Copilot disable")
-
 vim.opt.swapfile = false
 
 require("lspconfig").terraformls.setup({})

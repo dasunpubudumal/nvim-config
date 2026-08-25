@@ -5,20 +5,28 @@ return {
     config = function()
       -- setup Kanagawa colorscheme
       require("kanagawa").setup({
-        -- optional settings
-        compile = true, -- generate compiled file for faster startup
-        undercurl = true, -- enable undercurl
+        compile = false, -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
         commentStyle = { italic = true },
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        variablebuiltinStyle = { italic = true },
-        specialReturn = true,
-        specialException = true,
-        transparent = false, -- set true if you want a transparent background
-        dimInactive = false,
-        globalStatus = true,
+        transparent = true, -- do not set background color
+        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = { -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        overrides = function(colors) -- add/modify highlights
+          return {}
+        end,
+        theme = "wave", -- Load "wave" theme
+        background = { -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus",
+        },
       })
 
       -- set colorscheme
@@ -33,14 +41,14 @@ return {
       require("vesper").setup({
         transparent = true, -- set true if you want a transparent background
       })
-      -- vim.cmd("colorscheme vesper")
+      vim.cmd("colorscheme vesper")
     end,
   },
   {
     "kvrohit/rasmus.nvim",
     priority = 1000,
     config = function()
-      -- vim.cmd("colorscheme rasmus")
+      vim.cmd("colorscheme rasmus")
     end,
   },
   {
@@ -62,7 +70,7 @@ return {
     config = function()
       require("kanagawa-paper").setup({
         -- optional settings
-        transparent = true, -- set true if you want a transparent background
+        -- transparent = true, -- set true if you want a transparent background
       })
 
       -- vim.cmd("colorscheme kanagawa-paper")
@@ -88,6 +96,7 @@ return {
     config = function()
       require("lake-dweller").setup({
         variant = "lake-dweller", -- "lake-dweller", "pond-dweller", or "ocean-dweller"
+        transparent = true,
       })
       -- vim.cmd.colorscheme("lake-dweller")
     end,
@@ -99,6 +108,7 @@ return {
     config = function()
       -- NOTE: you do not need to call setup if you don't want to.
       require("vague").setup({
+        transparent = true,
         -- optional configuration here
       })
       -- vim.cmd("colorscheme vague")
@@ -134,7 +144,7 @@ return {
       require("kanso").setup({
         transparent = true,
       })
-      vim.cmd.colorscheme("kanso")
+      -- vim.cmd.colorscheme("kanso")
     end,
   },
   {
@@ -144,7 +154,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      -- vim.cmd("colorscheme rose-pine")
+      vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -200,6 +210,33 @@ return {
         transparent = true,
       }) -- (see Configuration below for all customization options)
       -- vim.cmd.colorscheme("oasis") -- After setup, apply theme (or any style like "oasis-night")
+    end,
+  },
+  {
+    "Aejkatappaja/cendre",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cendre").setup({
+        transparent = true,
+        italic_virtual_text = false,
+      })
+      -- vim.cmd.colorscheme("cendre")
+    end,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = { colorscheme = "cendre" },
+  },
+  {
+    "marekh19/meowsoot.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("meowsoot").setup({
+        transparent = true,
+      })
+      -- vim.cmd.colorscheme("meowsoot")
     end,
   },
 }
