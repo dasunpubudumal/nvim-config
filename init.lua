@@ -6,7 +6,7 @@ vim.o.guifont = "Cascadia Code:h20"
 vim.g.neovide_line_space = 6
 vim.opt.linespace = 8
 
-vim.g.neovide_cursor_vfx_mode = { "sonicboom", "railgun" }
+vim.g.neovide_cursor_vfx_mode = "railgun"
 
 if vim.g.neovide then
   vim.keymap.set({ "n", "v" }, "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")

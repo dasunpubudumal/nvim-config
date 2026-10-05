@@ -4,13 +4,9 @@ return {
     lazy = false,
     build = ":TSUpdate",
     ensure_installed = {
-
       "rust",
-
       "lua",
-
       "python",
-
       "bash",
     },
   },
