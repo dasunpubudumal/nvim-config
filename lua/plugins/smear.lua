@@ -1,6 +1,7 @@
 return {
   {
     "sphamba/smear-cursor.nvim",
+    enabled = false,
     cond = not vim.g.neovide, -- disable in Neovide; use neovide_cursor_vfx_mode instead
     opts = {
       -- ====== Fire Cursor ====

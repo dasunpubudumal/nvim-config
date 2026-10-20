@@ -1,22 +1,21 @@
 return {
   "nvim-lualine/lualine.nvim",
-  enabled = false,
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("lualine").setup({
       options = {
-        theme = "auto", -- Sets theme to auto (gruvbox, tokyonight, etc.)
-        component_separators = { left = "", right = "" },
-        section_separators = { left = "", right = "" },
+        theme = "catppuccin-nvim",
+        component_separators = "",
+        section_separators = { left = "", right = "" },
         disabled_filetypes = { "neo-tree", "packer" },
       },
       sections = {
-        lualine_a = { "mode" },
+        lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
         lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = { "filename" },
         lualine_x = { "lsp_status", "fileformat", "filetype" },
         lualine_y = { "progress" },
-        lualine_z = { "location" },
+        lualine_z = { { "location", separator = { right = "" }, left_padding = 2 } },
       },
     })
   end,

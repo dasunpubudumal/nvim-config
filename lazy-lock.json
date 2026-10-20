@@ -6,6 +6,7 @@
   "catppuccin": { "branch": "main", "commit": "edefef779ab08ce1a4a404713e3012b0d202bd35" },
   "cendre": { "branch": "main", "commit": "5c9d924a4c75c130a1c812ee3e240d78a92d2c3a" },
   "conform.nvim": { "branch": "master", "commit": "016802de402556da54c36bd7359b441266b01cdd" },
+  "converge.nvim": { "branch": "main", "commit": "3c2648a56fb85bacc56ffee939a46e386fad5c8f" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "ember": { "branch": "main", "commit": "6f8ca3d0f228fbd61e5aeeb5c68343c410720873" },
   "flash.nvim": { "branch": "main", "commit": "b6346946d10d07998efee029fb0f7a593806d0cd" },

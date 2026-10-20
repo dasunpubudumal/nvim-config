@@ -41,14 +41,14 @@ return {
       require("vesper").setup({
         transparent = true, -- set true if you want a transparent background
       })
-      vim.cmd("colorscheme vesper")
+      -- vim.cmd("colorscheme vesper")
     end,
   },
   {
     "kvrohit/rasmus.nvim",
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme rasmus")
+      -- vim.cmd("colorscheme rasmus")
     end,
   },
   {
@@ -154,7 +154,7 @@ return {
       require("rose-pine").setup({
         disable_background = true,
       })
-      vim.cmd("colorscheme rose-pine")
+      -- vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -224,9 +224,20 @@ return {
       -- vim.cmd.colorscheme("cendre")
     end,
   },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = { colorscheme = "catppuccin" },
+  -- },
   {
-    "LazyVim/LazyVim",
-    opts = { colorscheme = "cendre" },
+    "sunnytamang/converge.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("converge").setup({
+        recipe = { ui = "catppuccin", syntax = "rose-pine" },
+      })
+      vim.cmd.colorscheme("converge")
+    end,
   },
   {
     "marekh19/meowsoot.nvim",
