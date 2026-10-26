@@ -158,6 +158,16 @@ return {
     end,
   },
   {
+    "kryptamine/gruber-darker-renaissance",
+    name = "gruber-darker-renaissance",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("gruber-darker-renaissance").setup({})
+      -- vim.cmd.colorscheme("gruber-darker-renaissance") -- converge applies the final scheme
+    end,
+  },
+  {
     "wnkz/monoglow.nvim",
     lazy = false,
     priority = 1000,
@@ -232,9 +242,12 @@ return {
     "sunnytamang/converge.nvim",
     lazy = false,
     priority = 1000,
+    -- Load (and run setup for) the recipe's themes first, so converge reads the
+    -- transparent catppuccin rather than its defaults
+    dependencies = { "catppuccin", "gruber-darker-renaissance" },
     config = function()
       require("converge").setup({
-        recipe = { ui = "catppuccin", syntax = "rose-pine" },
+        recipe = { ui = "catppuccin", syntax = "gruber-darker-renaissance" },
       })
       vim.cmd.colorscheme("converge")
     end,
